@@ -11,6 +11,8 @@ module.exports = (pages) => layout(html`
   <hr>
   <ul class="list-unstyled">
     <ul>
-      <!-- PLACEHOLDER LIST OF PAGES -->
+      `${pages.forEach(page => {
+        `<li>${page.slug}</li>`
+      });}`
     </ul>
   </ul>`);
